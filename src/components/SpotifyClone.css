@@ -26,18 +26,18 @@ body {
 
 .sidebar .navigation ul {
     list-style: none;
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 
 .sidebar .navigation ul li {
-    padding: 0.6rem 2px;
+    padding: 1rem 0.4rem;
 }
 
 .sidebar .navigation ul li a {
     color: #b3b3b3;
     text-decoration: none;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.2rem;
 }
 
 .sidebar .navigation ul li .fa {
@@ -51,7 +51,8 @@ body {
 
 .sidebar .policies {
     position: absolute;
-    bottom: 100px;
+    bottom: 2rem;
+    /* font-size: 3rem; */
 }
 
 .sidebar .policies ul {
@@ -66,7 +67,7 @@ body {
     color: #b3b3b3;
     font-weight: 500;
     text-decoration: none;
-    font-size: 10px;
+    font-size: 1rem;
 }
 
 .sidebar .policies ul li a:hover {
@@ -86,7 +87,7 @@ body {
     justify-content: space-between;
     /* gap: 20rem; */
     background-color: #000;
-    padding: 1rem; 
+    padding: 1.4rem; 
     margin-left: 260px;
     margin-bottom: 10px; 
 }
@@ -112,7 +113,7 @@ body {
 }
 .spotify-input{
     background-color: rgb(30, 29, 29);
-    height: 3rem;
+    height: 1.6rem;
     width: 30rem;
     padding: 0.8rem 1.1rem;
     border-radius: 3rem;
@@ -122,6 +123,7 @@ body {
     outline:none ;
     caret-color: white;
     color: white;
+    /* margin-left: 1rem; */
 }
 
 .spotify-input:hover{
@@ -186,11 +188,13 @@ body {
 .spotify-playlists .list {
     display: flex;
     gap: 20px;
-    overflow: hidden;
+    /* overflow: hidden; */
+
+    overflow-x: scroll;
 }
 
 .spotify-playlists .list .item {
-    min-width: 140px;
+    min-width: 220px;
     width: 160px;
     padding: 15px;
     background-color: #181818;
@@ -287,4 +291,25 @@ body {
     border: 0px;
     border-radius: 40px;
     cursor: pointer;
+}
+
+.audio-src{
+    /* background-color: #000; */
+    height: 2.4rem;
+    width: 100%;
+    margin-top:0.5rem ;
+    padding: 1rem;
+    margin-left:-1rem ;
+}
+.search-btn{
+
+ position: relative; 
+    left: -2.4rem;
+    top: 0.2rem;
+    cursor: pointer;
+    height: 1rem;
+    width: 1rem;
+    background: transparent;
+    outline: none;
+    border: none;
 }

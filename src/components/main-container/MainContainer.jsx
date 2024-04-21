@@ -1,4 +1,4 @@
-import React from 'react'
+import React , {useState} from 'react'
 import Tophit from "../images/Today's Top Hits.jpg"
 import rapcavior from "../images/RapCaviar.jpg"
 import allout from "../images/All Out 2010s.jpg"
@@ -20,9 +20,52 @@ import mumbai from "../images/The Sound of Mumbai.jpg"
 import workday from "../images/Workday Lounge.jpg"
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaSearch } from "react-icons/fa";
+import { faHome, faSearch, faBook, faChevronLeft, faChevronRight, faPlus, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const MainContainer = () => {
+    const [active , setActive] = useState(false)
+
+    const handleActive = () =>{
+        setActive(true)
+    }
     return (
+       <div>
+        <div>
+        <div className="topbar">
+                    <div className="prev-next-buttons">
+                        <button type="button">
+                            <FontAwesomeIcon icon={faChevronLeft} />
+                        </button>
+                        <button type="button">
+                            <FontAwesomeIcon icon={faChevronRight} />
+                        </button>
+                    </div>
+
+                    <Link to="/search"> <div className="search-bar">
+                        <form onSubmit={(e)=> e.preventDefault()} className="spotify-search-form" action="">
+                       <input 
+                        type=""
+                        className={`spotify-input ${ active ? "spotify-input-active": null}`}
+                        placeholder="What do you want to play?"
+                        onClick={handleActive}
+                        /> 
+                        <button className="search-btn" type="submit">
+                            <div><FaSearch color='white' size={20}/></div>
+                        </button>
+                        </form>
+                    </div></Link>
+                    <div className="navbar">
+                        <ul>
+                            <li>
+                                <a href="/">Sign Up</a>
+                            </li>
+                        </ul>
+                        <button type="button">Login</button>
+                    </div>
+                </div>
+    </div>
         <div>
             <div className="main-container">
 
@@ -231,6 +274,8 @@ const MainContainer = () => {
 
             </div>
         </div>
+        </div>
+
     )
 }
 

@@ -1,6 +1,7 @@
 import React , {useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faSearch, faBook, faChevronLeft, faChevronRight, faPlus, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 const Topbar = () => {
     const [active , setActive] = useState(false)
 
@@ -19,16 +20,16 @@ const Topbar = () => {
                         </button>
                     </div>
 
-                    <div className="search-bar">
+                    <Link to="/search"> <div className="search-bar">
                         <form onSubmit={(e)=> e.preventDefault()} className="spotify-search-form" action="">
-                        <input 
+                       <input 
                         type="search"
                         className={`spotify-input ${ active ? "spotify-input-active": null}`}
                         placeholder="What do you want to play?"
                         onClick={handleActive}
-                        />
+                        /> 
                         </form>
-                    </div>
+                    </div></Link>
                     <div className="navbar">
                         <ul>
                             <li>

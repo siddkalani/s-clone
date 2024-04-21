@@ -1,9 +1,6 @@
 import { useEffect } from "react"
 import React ,{useState} from 'react'
 import "./Tracks.css"
-,
-
-
 
 const Tracks = (props) => {
 

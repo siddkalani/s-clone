@@ -5,6 +5,7 @@ import spotifylogo from '../images/Spotify Logo.png'
 // import { faHome, faSearch, faBook, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faSearch, faBook, faChevronLeft, faChevronRight, faPlus, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
     return (
@@ -30,7 +31,7 @@ const Sidebar = () => {
                             <a href="/">
                                 <div className="nav-items">
                                     <FontAwesomeIcon icon={faSearch} />
-                                    <span>Search</span>
+                                   <Link to="/search"><span>Search</span></Link> 
                                 </div>
                             </a>
                         </li>

@@ -13,6 +13,7 @@ import Sidebar from './sidebar/Sidebar';
 import App from './search-page/App';
 import Topbar from './topbar/Topbar';
 import Tracks from './Tracks';
+import Search from './search-page/Search';
 
 function SpotifyClone() {
 
@@ -20,16 +21,14 @@ function SpotifyClone() {
         <div>
             <BrowserRouter>
 
-               
+                    <Sidebar/>
+                    {/* <Topbar/> */}
 
-                    <Sidebar />
-
-                    <Topbar />
                     <Routes>
 
                     <Route path='/' element={ <MainContainer />}></Route>
                     <Route path='/main' element={ <MainContainer />}></Route>
-                    <Route path='/search' element={ <App />}></Route>
+                    <Route path='/search' element={ <Search />}></Route>
                     <Route path='/tracks' element={ <Tracks />}></Route>
                     {/* <div className="preview">
                 <div className="text">

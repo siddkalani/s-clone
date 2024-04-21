@@ -58,7 +58,12 @@ const App = (props) => {
       <div className='navbar'>
          <div className='logo'><img src={spotifyy} alt="" /></div>
         <form className="search-bar">
-          <input type="search" onChange={e => setSearchInput(e.target.value)} name="search" pattern=".*\S.*" required />
+          <input 
+          type="search" 
+          onChange={e => setSearchInput(e.target.value)}  
+          name="search" 
+          pattern=".*\S.*" 
+          required />
           <button onClick={search} className="search-btn" type="submit">
             <span>Search</span>
           </button>
